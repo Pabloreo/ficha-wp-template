@@ -1,0 +1,58 @@
+.hero {
+    width: 100%;
+    min-height: 500px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(136, 172, 192, 1) 100%
+    );
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .hero_container {
+    background-image: url('http://35.247.39.51/wp-content/uploads/2022/08/hero-img.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 50%;
+    min-height: 500px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .hero_container_txt {
+    max-width: 90%;
+    height: 100%;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    color: #031a32;
+  }
+  
+  .hero_container_txt h1 {
+    color: #83b5cd;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5rem;
+  }
+
+  .hero_container_txt h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.75rem;
+  }
+  
+  @media (min-width: 768px) {
+    .hero_container_txt {
+      max-width: 50%;
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    .hero,
+    .hero_container {
+      min-height: 700px;
+    }
+  }
+  

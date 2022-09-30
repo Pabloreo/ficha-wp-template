@@ -1,0 +1,307 @@
+/* 
+    Theme Name: Colchonesmx
+    Theme URI: 
+    Author: Pablo Ramirez
+    Author URI: https://www.linkedin.com/in/pablo-antonio-ramirez-vazquez/
+    Description: Tema creado para describir los mejores colchones de México
+    Version: 1.0
+    License: GNU Lesser General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Tags: Colchones, Cama
+*/
+
+:root {
+  /** Fuentes **/
+  --fuentePrincipal: "Staatliches", cursive;
+  --fuenteTextos: "Open Sans", sans-serif;
+  --fuenteSecundaria: "Raleway", sans-serif;
+
+  /** colores **/
+  --colorPrimario: #84b5cd;
+  --azulOscuro: #00022e;
+  --azulClaro: #cadbe4;
+  --ratingStar: #ffe500;
+  --blanco: #ffffff;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Now 10px = 1rem! */
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2;
+  font-family: var(--fuenteSecundaria);
+}
+
+/** Headings **/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--fuentePrincipal);
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 6rem;
+}
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3.6rem;
+}
+h4 {
+  font-size: 2.4rem;
+}
+
+/** Globales **/
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contenedor {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+hr {
+  border: solid 1px var(--azulClaro);
+}
+
+.imagen-destacada {
+  margin-bottom: 3rem;
+}
+
+/** Utilidades**/
+
+.text-center {
+  text-align: center;
+}
+
+.texto-primario {
+  color: var(--colorPrimario);
+}
+
+.seccion {
+  padding: 5rem 0;
+}
+
+/** Header **/
+
+.site-header {
+  background-color: var(--blanco);
+  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  max-width: 200px;
+}
+
+/** Menu principal **/
+.menu-principal {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .menu-principal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .menu-principal .menu {
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu-principal li {
+    margin-right: 2rem;
+  }
+  .menu-principal li:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.menu-principal a {
+  font-family: var(--fuentePrincipal);
+  color: var(--azulOscuro);
+  font-size: 2.2rem;
+  padding: 0.5rem 2rem;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menu-principal a {
+    font-size: 2.6rem;
+    position: relative;
+    z-index: 1;
+  }
+  .menu-principal a::before,
+  .menu-principal a::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50%;
+    background-color: var(--colorPrimario);
+    z-index: -1;
+    transform: scaleX(0);
+    transition: transform 0.6s;
+  }
+  .menu-principal a::before {
+    top: 0;
+    transform-origin: left;
+  }
+  .menu-principal a::after {
+    top: 50%;
+    transform-origin: right;
+  }
+  .menu-principal a:hover::before {
+    transform: scaleX(1);
+  }
+  .menu-principal a:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+.menu-principal .current_page_item {
+  border-bottom: 3px solid var(--azulOscuro);
+}
+
+/** Reescribir estilos menu mobile **/
+
+.slicknav_menu {
+  background-color: var(--blanco);
+  color: var(--azulOscuro);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slicknav_btn {
+  background-color: var(--colorPrimario);
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+.slicknav_nav a {
+  font-size: 2.4rem;
+  text-align: center;
+  font-family: var(--fuentePrincipal);
+  color: var(--azulOscuro);
+}
+
+.slicknav_nav a:hover {
+  background: transparent;
+  color: var(--colorPrimario);
+}
+
+@media (min-width: 768px) {
+  .slicknav_menu {
+    display: none;
+  }
+}
+
+/** Footer **/
+
+.contenido-footer {
+  padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+  .contenido-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.site-footer .menu-principal {
+  display: block;
+}
+
+.site-footer a {
+  text-align: center;
+}
+
+.site-footer .menu-principal .current_page_item {
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .site-footer .menu-principal .current_page_item {
+    border-bottom: 1px solid var(--azulOscuro);
+  }
+}
+
+.site-footer .menu-principal a::before,
+.site-footer .menu-principal a::after {
+  display: none;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/** Paginas **/
+
+.pagina h1 {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .pagina.con-sidebar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .con-sidebar .contenido-principal {
+    flex: 0 0 calc(65% - 2rem);
+  }
+  .con-sidebar .sidebar {
+    flex: 0 0 calc(35% - 2rem);
+  }
+}
+
+/** NO sidebar **/
+
+.no-sidebar {
+  display: flex;
+
+  justify-content: center;
+}
+
+.no-sidebar .contenido-principal {
+  flex: 0 1 800px;
+}
