@@ -1,7 +1,5 @@
 <?php
-
 //Cuando el tema es activado
-
 function colchones_setup() {
     //Habilitar imagenes destacadas
     add_theme_support('post-thumbnails');

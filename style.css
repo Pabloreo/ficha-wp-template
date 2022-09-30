@@ -117,7 +117,7 @@ hr {
 @media (min-width: 768px) {
   .barra-navegacion {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
