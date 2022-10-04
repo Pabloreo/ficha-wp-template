@@ -324,3 +324,15 @@ hr {
 .no-sidebar .contenido-principal {
   flex: 0 1 800px;
 }
+
+
+/** Category page **/ 
+
+.product-title a{
+    text-decoration: none;
+    color: var(--colorPrimario);
+}
+
+.product-title a:hover {
+    color: var(--naranja);
+}
