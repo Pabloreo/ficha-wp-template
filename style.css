@@ -22,6 +22,7 @@
   --azulClaro: #cadbe4;
   --ratingStar: #ffe500;
   --blanco: #ffffff;
+  --naranja: #f29231;
 }
 
 html {
@@ -236,8 +237,26 @@ hr {
 
 /** Footer **/
 
+.site-footer {
+    padding: 1em;
+    margin-top: 2em;
+    background-color: #161616;
+    color: #cadbe4;
+}
 .contenido-footer {
   padding: 4rem 0;
+}
+
+.menu-footer a {
+    font-family: var(--fuentePrincipal);
+    color: var(--azulClaro);
+    font-size: 2.2rem;
+    padding: 0.5rem 2rem;
+    display: block;
+}
+
+.menu-footer a:hover {
+    color: var(--naranja)   
 }
 
 @media (min-width: 768px) {

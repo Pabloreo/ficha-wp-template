@@ -1,11 +1,10 @@
-        <footer class="site-footer contenedor">
-            <hr>
-            <div class="contenido-footer">
+        <footer class="site-footer ">
+            <div class="contenido-footer contenedor">
                 <?php
                 $args = array(
                     'theme_location' => 'menu-principal',
                     'container' => 'nav',
-                    'container_class' => 'menu-principal'
+                    'container_class' => 'menu-footer'
                 );
                 wp_nav_menu($args); 
                 ?>
