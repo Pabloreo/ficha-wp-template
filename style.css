@@ -12,7 +12,7 @@
 
 :root {
   /** Fuentes **/
-  --fuentePrincipal: "Staatliches", cursive;
+  --fuentePrincipal: "Circular", Arial, sans-serif;;
   --fuenteTextos: "Open Sans", sans-serif;
   --fuenteSecundaria: "Raleway", sans-serif;
 
@@ -23,6 +23,12 @@
   --ratingStar: #ffe500;
   --blanco: #ffffff;
   --naranja: #f29231;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url(http://ficha.local/wp-content/themes/ficha/fonts/CircularStd.ttf);
+    font-weight: normal;
 }
 
 html {
