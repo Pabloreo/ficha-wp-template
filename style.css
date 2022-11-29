@@ -90,6 +90,7 @@ img {
   max-width: 1200px;
   width: 95%;
   margin: 0 auto;
+  position: relative;
 }
 
 hr {
@@ -203,6 +204,12 @@ hr {
 
 .menu-principal .current_page_item {
   border-bottom: 3px solid var(--azulOscuro);
+}
+
+.selector-pais {
+    position: absolute; 
+    top: 30px;
+    right: 20px;
 }
 
 /** Reescribir estilos menu mobile **/
